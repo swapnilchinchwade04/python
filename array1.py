@@ -8,7 +8,7 @@ def main():
      print("Data from array:")
      for i in range(len(arr1)):
          print(arr1[i], end=" ")
-         
+
 
 if __name__ == "__main__":
     main()
