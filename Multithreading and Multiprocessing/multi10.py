@@ -33,10 +33,5 @@ def main():
     thread2.start()
     thread2.join()
 
-
-
-
-
-
 if __name__ == "__main__":
     main()
