@@ -4,15 +4,15 @@ import threading
 
 
 def fun(x):
-    print("PID : ", os.getpid())
-    print("PPID : ", os.getppid())
+    #print("PID : ", os.getpid())
+    #print("PPID : ", os.getppid())
     print("Inside Fun.")
     for i in range(x):
         print("Fun : ", i)
 
 def gun(x):
-    print("PID : ", os.getpid())
-    print("PPID : ", os.getppid())
+    #print("PID : ", os.getpid())
+    #print("PPID : ", os.getppid())
     print("Inside Gun")
     for i in range(x):
         print("Gun : ", i)
