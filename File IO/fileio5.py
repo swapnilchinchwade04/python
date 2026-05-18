@@ -3,23 +3,19 @@
 # Search “Lorem” in Demo.txt
 
 #option 1
-fd = open("abc.txt","r")
-print(fd.read())
+fd = input("Enter file name:")
+ipstr = input("Enter a string to find the occurrences: ")
 
-ipstr = input("Enter a string")
-print(ipstr)
-
-with open("abc.txt","r") as file:
+with open(fd, "r") as file:
     content = file.read()
     count = content.count(ipstr)
 
 print("No of occurrences in file :", count)
 
-
 #option 2
 
 count1=0
-with open("abc.txt","r") as file:
+with open(fd,"r") as file:
     for line in file:
         count1 += line.count(ipstr)
 
