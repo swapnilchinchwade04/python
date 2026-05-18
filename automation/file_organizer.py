@@ -8,11 +8,11 @@ destination_folder = r"C:\Users\DELL\Downloads\Organized"
 
 # File type categories
 file_types = {
-    #  "Documents": [".pdf", ".docx", ".txt"],
+      "Documents": [".pdf", ".docx", ".txt"],
      "Images": [".jpg", ".jpeg", ".png", ".gif"],
-    # "Videos": [".mp4", ".mov", ".avi"],
-    # "Music": [".mp3", ".wav"],
-    # "Archives": [".zip", ".rar"]
+     "Videos": [".mp4", ".mov", ".avi"],
+     "Music": [".mp3", ".wav"],
+     "Archives": [".zip", ".rar"]
 }
 
 # Create destination folders if they don’t exist
