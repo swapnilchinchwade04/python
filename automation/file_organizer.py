@@ -1,4 +1,5 @@
-#Automatically move files from your Downloads folder into categorized subfolders (e.g., PDFs → Documents, Images → Pictures, etc.).
+#Automatically move files from your Downloads folder into categorized subfolders
+# (e.g., PDFs → Documents, Images → Pictures, etc.).
 import os
 import shutil
 
