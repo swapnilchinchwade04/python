@@ -14,10 +14,10 @@ def main():
         print("Use -h for help")
 
     if len(argv) == 2:
-        if argv[1] == "-u" or argv[1] == "-u":
+        if argv[1] == "-u" or argv[1] == "-U":
             print("Script is used to perform addition of two numbers.")
             exit()
-        elif argv[1] == "-h" or argv[1] == "-h":
+        elif argv[1] == "-h" or argv[1] == "-H":
             print("Help: Name_of_Script First_Argument Second_Argument")
             exit()
         else:
