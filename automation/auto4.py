@@ -1,5 +1,5 @@
 # Design automation script which accept directory name and two file extensions from user.
-# Rename all files with first file extension with the second file extenntion.
+# Rename all files with first file extension with the second file extension.
 # Usage : DirectoryRename.py “Demo” “.txt” “.doc”
 # Demo is name of directory and .txt is the extension that we want to search and rename with .doc.
 # After execution this script each .txt file gets renamed as .doc.
@@ -7,6 +7,7 @@
 import os
 from sys import *
 from pathlib import Path
+import shutil
 
 def main():
     print("----------Automation program to display file from specific folder with required extension.---------")
@@ -33,17 +34,30 @@ def main():
                 if os.path.exists(argv[1]):
                     if os.listdir(argv[1]):
                         files= os.listdir(argv[1])
-                        for file in files:
-                            current_extension = os.path.splitext(file)[1]
-                            if current_extension == ".txt":
+                        dir_path = os.path.dirname(os.path.abspath(__file__))
+                        current_dir =Path(r"D:\Python 2026\Repository code\python\\automation\\" + argv[1])
 
-                                file_path = Path(file)
-                                print("File name : ", file_path)
-                                new_file_path = file_path.with_suffix(argv[3])
-                                print("File path new : ", new_file_path)
+                        # Loop through all .txt files in the directory
+                        for file in current_dir.glob("*.txt"):
+                            file.rename(file.with_suffix(".doc"))
+
+
+                        # for file in files:
+                        #     current_extension = os.path.splitext(file)[1]
+                        #     if current_extension == ".txt":
+                        #         dir_path = os.path.dirname(os.path.abspath(__file__))
+                        #         dir = r"D:\Python 2026\Repository code\python\\automation\\" + argv[1]
+                        #
+                        #         dest = shutil.move(dir + '\\' + argv[1] + '\\' + file, dir + '\\' + file)
+                        #         print("Moved file: ", dest)
+                        #         # file_path = Path(file)
+                                # print("File name : ", file_path)
+                                # new_file_path = file_path.with_suffix(argv[3])
+                                # print("File path new : ", new_file_path)
+
                                 # Rename the file on the system
-                                file_path.rename(new_file_path)
-                                print("New File name : ", file_path)
+                                #file_path.rename(new_file_path)
+                                #print("New File name : ", file_path)
 
                                 # current_name = os.path.splitext(file)[0]
                                 # absolute_path = os.path.abspath(file)
