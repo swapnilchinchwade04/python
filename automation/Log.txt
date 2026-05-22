@@ -1,0 +1,16 @@
+abc1.doc
+abc2.txt
+mno.txt
+str.txt
+abc1.doc
+abc2.txt
+mno.txt
+str.txt
+str2.txt
+abc1.doc
+abc2.txt
+mno.txt
+mno2.txt
+pqr.txt
+pqr2.doc
+xyz.txt
