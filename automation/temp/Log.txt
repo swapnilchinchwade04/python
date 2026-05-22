@@ -1,0 +1,7 @@
+abc1.doc
+abc2.txt
+mno.txt
+mno2.txt
+pqr.txt
+pqr2.doc
+xyz.txt

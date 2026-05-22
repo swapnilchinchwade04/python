@@ -1,7 +1,7 @@
-# Design automation script which accept directory name and write names of duplicate files from
-# that directory into log file named as Log.txt. Log.txt file should be created into current
-# directory.
-# Usage : DuplicateFiles.py “Demo”
+# Design automation script which accept directory name and delete all duplicate files from that
+# directory. Write names of duplicate files from that directory into log file named as Log.txt.
+# Log.txt file should be created into current directory.
+# Usage : DuplicateFileRemoval.py “Demo”
 
 import os
 from sys import *
@@ -39,12 +39,14 @@ def main():
                                 file_path = os.path.join(folder_path, file)
 
                                 file_hash =hashlib.sha256(open(os.path.join(folder_path, file), "rb").read()).hexdigest()
-                                #print(file_hash)
+                                #print("File PAth: ",file_path)
                                 if file_hash in duplicates:
                                     # if file hash already present in dictionary then add multiple list item to file_hash
                                     duplicates[file_hash].append(file_path)
                                     with open(folder_path+"\\"+"Log.txt", "a") as log_file:
                                         log_file.write(file + "\n")
+                                    if os.path.exists(file_path):
+                                        os.remove(file_path)
 
                                 else:
                                     # if file hash is not present in dictionary then add simple hash:file_path in dictionary
