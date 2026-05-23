@@ -27,7 +27,7 @@ def DirectoryWatcher(path):
 
 
 def main():
-    print("---- Marvellous Infosystems by Piyush Khairnar-----")
+    print("---- Automation Script for Directory Watcher-----")
 
     print("Application name : " + argv[0])
 
