@@ -33,41 +33,11 @@ def main():
             if argv[1]:
                 if os.path.exists(argv[1]):
                     if os.listdir(argv[1]):
-                        files= os.listdir(argv[1])
-                        dir_path = os.path.dirname(os.path.abspath(__file__))
                         current_dir =Path(r"D:\Python 2026\Repository code\python\\automation\\" + argv[1])
 
                         # Loop through all .txt files in the directory
-                        for file in current_dir.glob("*.txt"):
-                            file.rename(file.with_suffix(".doc"))
-
-
-                        # for file in files:
-                        #     current_extension = os.path.splitext(file)[1]
-                        #     if current_extension == ".txt":
-                        #         dir_path = os.path.dirname(os.path.abspath(__file__))
-                        #         dir = r"D:\Python 2026\Repository code\python\\automation\\" + argv[1]
-                        #
-                        #         dest = shutil.move(dir + '\\' + argv[1] + '\\' + file, dir + '\\' + file)
-                        #         print("Moved file: ", dest)
-                        #         # file_path = Path(file)
-                                # print("File name : ", file_path)
-                                # new_file_path = file_path.with_suffix(argv[3])
-                                # print("File path new : ", new_file_path)
-
-                                # Rename the file on the system
-                                #file_path.rename(new_file_path)
-                                #print("New File name : ", file_path)
-
-                                # current_name = os.path.splitext(file)[0]
-                                # absolute_path = os.path.abspath(file)
-                                # print( absolute_path)
-                                # print("File name : ",file)
-                                # print("File extension : ",current_extension)
-                                # new_file = current_name + argv[3]
-                                # print("New File extension : ", new_file)
-                                # # update file extension to new one
-                                # os.rename(os.path.abspath(file),  new_file)
+                        for file in current_dir.glob("*"+argv[2]):
+                            file.rename(file.with_suffix(argv[3]))
 
                 else:
                     print("Folder not found!")

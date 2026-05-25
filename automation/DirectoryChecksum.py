@@ -3,12 +3,11 @@
 # Demo is name of directory.
 
 import os
-from pathlib import Path
 from sys import *
 import hashlib
 
 def main():
-    print("---------------------- Automation script which accept directory name and display checksum of all files ----------------------")
+    print("---------------------- Automation script which accept directory name and display checksum of all files. ----------------------")
     print("Script Name:", argv[0])
     print("No of arguments accepted : ", len(argv)-1 )
 
@@ -20,7 +19,7 @@ def main():
 
     if len(argv) == 2:
         if argv[1] == "-u" or argv[1]== "-U":
-            print("Script is used for finding all files with specified extension in required directory.")
+            print("Script is used to accept directory name and display checksum of all files.")
             exit()
         if argv[1]=="-h" or argv[1] == "-H":
             print("Help: Name_of_Script Directory_Name File_Extension")

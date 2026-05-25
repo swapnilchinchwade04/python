@@ -6,7 +6,6 @@
 # Directory as Temp and copy all files with extension .exe from Demo to Temp.
 
 import os
-from pathlib import Path
 from sys import *
 import shutil
 

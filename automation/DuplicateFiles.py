@@ -21,7 +21,7 @@ def main():
 
     if len(argv) == 2:
         if argv[1] == "-u" or argv[1] == "-U":
-            print("Script is used for finding all files with specified extension in required directory.")
+            print("Script is used to find duplicate files from directory.")
             exit()
         if argv[1] == "-h" or argv[1] == "-H":
             print("Help: Name_of_Script Directory_Name File_Extension")

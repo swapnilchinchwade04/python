@@ -41,8 +41,6 @@ def main():
                                 dir_path = os.path.dirname(os.path.abspath(__file__))
                                 #print("Dir path: ",dir_path)
                                 new_dir_path =r"D:\Python 2026\Repository code\python\\automation\\"+argv[2]
-                                #print("New Dir path: ", new_dir_path+ '\\' + file)
-                                #print("Old dir path: ", dir_path+'\\'+file)
                                 dest = shutil.move(dir_path+ '\\' + argv[1] +'\\'+file, new_dir_path + '\\' + file)
                                 print("Moved file: ", dest)
                 else:
