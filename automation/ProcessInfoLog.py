@@ -6,7 +6,6 @@
 import os
 from sys import argv
 import psutil
-import pathlib
 
 
 def processinfolog(path):
@@ -30,7 +29,7 @@ def processinfolog(path):
 def main():
     print("Automation Script which accept directory name & stores information of running process in log file.")
     print("Script Name:", argv[0])
-    print("No of arguments:", len(argv))
+    print("No of arguments:", len(argv)-1)
 
     if len(argv) < 1 or len(argv) > 2:
         print("Invalid number of arguments.")
