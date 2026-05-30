@@ -46,7 +46,7 @@ def main():
                                 if file_hash in duplicates:
                                     # if file hash already present in dictionary then add multiple list item to file_hash
                                     duplicates[file_hash].append(file_path)
-                                    with open(folder_path+"\\"+"Log.txt", "a") as log_file:
+                                    with open(folder_path+"\\"+"LogApp.txt", "a") as log_file:
                                         log_file.write(file + "\n")
                                     if os.path.exists(file_path):
                                         os.remove(file_path)
