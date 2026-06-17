@@ -68,6 +68,7 @@ def removeduplicatefiles(folder_name, r_email):
                 # print("Start Time: ", start_time)
                 file_count = 0
                 duplicates_file_count = 0
+                fdata = ''
                 file_count = sum(1 for entry in os.scandir(folder_name) if entry.is_file())
 
                 if len(files) > 1:
@@ -79,10 +80,11 @@ def removeduplicatefiles(folder_name, r_email):
                             #print("File Path: ",file_path)
                             if file_hash in duplicates:
                                 duplicates[file_hash].append(file_path)
-                                x = datetime.now()
-                                with open(dir_path + "\\" + "LogApp-"+x.strftime("%d-%m-%Y-%H-%M")+".txt", "a") as log_file:
-                                    log_file.write(file + "\n")
-                                    #print("Log File Name: ",log_file.name)
+                                fdata = fdata + file + "\n"
+                                # x = datetime.now()
+                                # with open(dir_path + "\\" + "LogApp-"+x.strftime("%d-%m-%Y-%H-%M")+".txt", "a") as log_file:
+                                #     log_file.write(file + "\n")
+                                #     #print("Log File Name: ",log_file.name)
                                 if os.path.exists(file_path):
                                     os.remove(file_path)
                                     #print("File removed")
@@ -91,8 +93,12 @@ def removeduplicatefiles(folder_name, r_email):
 
                             else:
                                 duplicates[file_hash] = [file_path]
-                    if e_flag == 1 and log_file.name:
+                    if e_flag == 1 and fdata!= '':
                         #print("Mail Sent.")
+                        x = datetime.now()
+                        with open(dir_path + "\\" + "LogApp-" + x.strftime("%d-%m-%Y-%H-%M") + ".txt", "a") as log_file:
+                            log_file.write(fdata + "\n")
+
                         sendmail(r_email, log_file.name,start_time, file_count, duplicates_file_count)
 
         else:
