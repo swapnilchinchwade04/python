@@ -1,11 +1,11 @@
 #Supervised Machine Learning Decision using Decision Tree & K Nearest Neighbor Play Predictor Case Dataset
 #Consider below characteristics of Machin Learning Application.
-#Classifier : Decision Tree, K Nearest Neighbor
+#Classifier : K Nearest Neighbor
 #Dataset : Play Predictor
 # Features : Weather, Temperature
 #Labels : Yes, No
-#Training Dataset : 30
-#Testing Dataset : 10
+#Training Dataset : 20
+#Testing Dataset : 20
 
 from sklearn import tree
 import pandas as pd
@@ -14,12 +14,6 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
 
-def calculate_accuracy_dtc(data_train, data_test, target_train, target_test):
-    classifier = tree.DecisionTreeClassifier()
-    classifier.fit(data_train, target_train)
-    prediction = classifier.predict(data_test)
-    accuracy = accuracy_score(target_test, prediction)
-    return accuracy
 
 def func_knn(data_train, data_test, target_train, target_test, weather_ip, temperature_ip):
     classifier = KNeighborsClassifier(3)
